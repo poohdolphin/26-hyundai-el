@@ -160,6 +160,8 @@ section{position:relative}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
 .chips span{font-size:14px;padding:7px 13px;border-radius:99px;background:#E6F4EC;color:#0B6B35;font-weight:500}
 .ucard .rule{font-size:14px;color:var(--ink-3);margin-top:20px}
+.use__note{margin-top:20px;font-size:14px;color:var(--ink-2);display:flex;gap:8px;align-items:flex-start}
+.use__note::before{content:"※";color:var(--wv-orange);font-weight:700}
 
 /* ===== 07 CTA ===== */
 .cta{padding:130px 0;text-align:center;background:linear-gradient(180deg,var(--paper) 0%,var(--wv-orange-soft) 100%)}
@@ -285,19 +287,19 @@ footer{background:var(--dark);color:rgba(255,255,255,.7);padding:48px 0 56px;fon
   <div class="wrap">
     <div class="family__top">
       <figure class="portrait rv">
-        <img src="seokhoon_portrait.jpg" alt="매트에 엎드려 턱을 괴고 있는 석훈이">
-        <div class="namecard"><b>석훈 <span style="font-size:14px;font-weight:500">(가명)</span></b><span>만 13세 · 여섯 식구의 첫째</span></div>
+        <img src="seokhoon_main.jpg" alt="바닥 매트 위에 누워 있는 석훈이" style="object-position:center 30%">
+        <div class="namecard"><b>석훈 <span style="font-size:14px;font-weight:500">(가명)</span></b><span>만 13세 · 네 자녀 중 셋째</span></div>
       </figure>
       <div>
         <span class="label rv">Chapter 1 · 석훈이와 가족</span>
-        <h2 id="t-family" class="rv d1">여섯 식구의 첫째,<br>석훈이</h2>
-        <p class="lead rv d2">석훈이는 부모님과 네 형제, 여섯 식구의 첫째입니다. 석훈이와 두 동생, 세 형제는 어려서부터 <b>중증 뇌전증(레녹스-가스토 증후군)</b> 진단을 받아 발달과 신체 기능에 심각한 제약이 있습니다.</p>
+        <h2 id="t-family" class="rv d1">네 자녀 중 셋째,<br>석훈이</h2>
+        <p class="lead rv d2">석훈이는 부모님과 네 자녀, 여섯 식구 중 셋째입니다. 석훈이와 두 형, 세 형제는 어려서부터 <b>중증 뇌전증(레녹스-가스토 증후군)</b> 진단을 받아 발달과 신체 기능에 심각한 제약이 있습니다.</p>
         <div class="tree rv d3" role="list" aria-label="가족 구성">
           <div class="p" role="listitem"><div class="dot">부</div><b>아버지</b>홀로 생계 책임</div>
           <div class="p" role="listitem"><div class="dot">모</div><b>어머니</b>당뇨 합병증 치료 중</div>
-          <div class="p sib me" role="listitem"><div class="dot">첫째</div><b>석훈</b>중증 뇌전증</div>
-          <div class="p sib" role="listitem"><div class="dot">둘째</div><b>둘째 동생</b>중증 뇌전증</div>
-          <div class="p sib" role="listitem"><div class="dot">셋째</div><b>셋째 동생</b>중증 뇌전증</div>
+          <div class="p sib" role="listitem"><div class="dot">첫째</div><b>첫째 형</b>중증 뇌전증</div>
+          <div class="p sib" role="listitem"><div class="dot">둘째</div><b>둘째 형</b>중증 뇌전증</div>
+          <div class="p sib me" role="listitem"><div class="dot">셋째</div><b>석훈</b>중증 뇌전증</div>
           <div class="p" role="listitem"><div class="dot">막내</div><b>막내</b>비장애 아동</div>
         </div>
         <div class="legend rv d3"><i></i>중증장애 진단을 받은 세 형제</div>
@@ -307,9 +309,9 @@ footer{background:var(--dark);color:rgba(255,255,255,.7);padding:48px 0 56px;fon
     <p class="bridge rv">수해는, 이미 하루하루가 돌봄이었던<br>가족에게 닥쳤습니다.</p>
 
     <div class="brothers">
-      <figure class="rv"><img src="seokhoon_sitting.jpg" alt="바닥에 앉아 있는 석훈이"><figcaption>첫째 석훈(가명)</figcaption></figure>
-      <figure class="rv d1"><img src="brother2.jpg" alt="바닥에 앉아 카메라를 바라보는 둘째 동생"><figcaption>둘째 동생</figcaption></figure>
-      <figure class="rv d2"><img src="brother3_mat.jpg" alt="바닥 매트 위에 누워 있는 셋째 동생" style="object-position:70% center"><figcaption>셋째 동생</figcaption></figure>
+      <figure class="rv"><img src="seokhoon_sitting.jpg" alt="바닥에 앉아 있는 첫째 형"><figcaption>첫째 형</figcaption></figure>
+      <figure class="rv d1"><img src="brother2.jpg" alt="바닥에 앉아 카메라를 바라보는 둘째 형"><figcaption>둘째 형</figcaption></figure>
+      <figure class="rv d2"><img src="brother3_towel.jpg" alt="바닥 매트 위에 누워 있는 석훈이" style="object-position:center 25%"><figcaption>셋째 석훈(가명)</figcaption></figure>
     </div>
   </div>
 </section>
@@ -322,11 +324,11 @@ footer{background:var(--dark);color:rgba(255,255,255,.7);padding:48px 0 56px;fon
     <p class="lead rv d2">세 형제에게는 식사와 배변까지, 일상생활 전반에 보호자의 돌봄이 필요합니다.</p>
     <div class="cards">
       <article class="card rv">
-        <img src="brother3_towel.jpg" alt="바닥 매트 위에 누워 있는 셋째 동생" style="object-position:center 30%">
+        <img src="seokhoon_portrait.jpg" alt="매트에 엎드려 턱을 괴고 있는 둘째 형" style="object-position:center 76%">
         <div class="card__b"><h3>바닥 매트와 보호 장비는<br>필수입니다</h3><p>세 형제는 스스로 몸을 지탱하지 못해 넘어지거나 바닥에 머리를 부딪히는 일이 잦습니다.</p></div>
       </article>
       <article class="card rv d1">
-        <img src="seokhoon_floor.jpg" alt="바닥 매트 위에 앉아 있는 석훈이" style="object-position:center 35%">
+        <img src="seokhoon_floor.jpg" alt="바닥 매트 위에 앉아 있는 첫째 형" style="object-position:center 35%">
         <div class="card__b"><h3>식사부터 배변까지,<br>보호자의 손길이 필요합니다</h3><p>발달과 신체 기능의 제약으로 식사와 배변 등 일상생활 전반을 보호자가 함께해야 합니다.</p></div>
       </article>
       <article class="card rv d2">
@@ -449,6 +451,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.7);padding:48px 0 56px;fon
         <p class="rule">30만원 × 6회</p>
       </article>
     </div>
+    <p class="use__note rv">모금액에 따라 지원 규모는 현대엘리베이터 인재문화팀과 논의하여 변동될 수 있습니다.</p>
   </div>
 </section>
 
