@@ -72,8 +72,10 @@ section{position:relative}
 .tag{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.04em;padding:7px 14px;border-radius:99px;background:var(--wv-orange);color:#fff;margin-bottom:22px}
 .hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(34px,6vw,64px);line-height:1.3;letter-spacing:-.015em;max-width:880px;text-shadow:0 2px 24px rgba(0,0,0,.35)}
 .hero p{margin-top:22px;font-size:clamp(16px,2vw,20px);max-width:760px;color:rgba(255,255,255,.88)}
-.hero__meta{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
-.chip{font-size:14px;padding:8px 14px;border:1px solid rgba(255,255,255,.45);border-radius:99px;backdrop-filter:blur(6px);background:rgba(255,255,255,.08)}
+.hero__btns{margin-top:32px;display:flex;gap:12px;flex-wrap:wrap}
+.hero__btns .btn{min-width:200px;padding:15px 26px;font-size:16px}
+.btn--glass{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.8);backdrop-filter:blur(6px)}
+.btn--glass:hover{background:#fff;color:var(--he-navy)}
 .scrollcue{position:absolute;z-index:2;left:50%;bottom:26px;transform:translateX(-50%);font-size:12px;letter-spacing:.2em;color:rgba(255,255,255,.75);display:flex;flex-direction:column;align-items:center;gap:8px}
 .scrollcue span{width:1px;height:34px;background:rgba(255,255,255,.6);animation:cue 2s ease-in-out infinite;transform-origin:top}
 @keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(0);transform-origin:bottom}}
@@ -251,9 +253,9 @@ footer{background:var(--dark);color:rgba(255,255,255,.7);padding:48px 0 56px;fon
     <span class="tag rv">의료비 · 긴급 생활물품 지원</span>
     <h1 class="rv d1">비가 모든 것을 앗아가도,<br>아이들의 치료는 멈추지 않도록</h1>
     <p class="rv d2">집중호우로 삶의 터전을 잃은 경남 산청의 석훈이네 가정.<br>중증 뇌전증을 앓는 세 형제의 치료가 끊기지 않도록 현대엘리베이터 임직원분들이 <span style="white-space:nowrap">함께해 주세요.</span></p>
-    <div class="hero__meta rv d3">
-      <span class="chip">모금 기간 2026년 12월</span>
-      <span class="chip">목표 헤리티지 북 1,100개</span>
+    <div class="hero__btns rv d3">
+      <a class="btn btn--glass" href="https://forms.cloud.microsoft/r/nbgKqrhkqW" target="_blank" rel="noopener noreferrer">헤리티지 북 신청서</a>
+      <a class="btn btn--main" href="https://my.worldvision.or.kr/support/?key=26-hyundai-el&amp;crmcd=73635&amp;mcode=31755" target="_blank" rel="noopener noreferrer">석훈이네 지원하기</a>
     </div>
   </div>
   <div class="scrollcue" aria-hidden="true">SCROLL<span></span></div>
@@ -461,17 +463,12 @@ footer{background:var(--dark);color:rgba(255,255,255,.7);padding:48px 0 56px;fon
 <section class="cta" aria-labelledby="t-cta">
   <div class="wrap">
     <span class="label rv">Chapter 3 · 함께하는 방법</span>
-    <h2 id="t-cta" class="rv d1">2026년 12월,<br>석훈이네와 함께해 주세요</h2>
+    <h2 id="t-cta" class="rv d1">석훈이네와<br>함께해 주세요</h2>
     <p class="lead rv d2">세 형제의 치료가 멈추지 않도록, 여러분의 마음을 모아 주세요.</p>
 
-    <div class="goal rv d2">
-      <div><div class="k">모금 기간</div><div class="v">2026년 12월</div></div>
-      <div><div class="k">모금 목표</div><div class="v">헤리티지 북 <em>1,100</em>개</div></div>
-    </div>
-
     <div class="btns rv d3">
-      <a class="btn btn--line" href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=mKzV-KmPVUOM2YTzIvsKeBBnLnnOWspIjgMLdLc1PmdUODE4MjY1TkxLTUw2OTFES085QUdRMk0zSi4u&amp;route=shorturl" target="_blank" rel="noopener noreferrer">헤리티지 북 신청서</a>
-      <a class="btn btn--main" id="supportBtn" href="https://my.worldvision.or.kr/support/?key=26-hyundai-el&amp;crmcd=73635&amp;mcode=" target="_blank" rel="noopener noreferrer">석훈이네 지원하기</a>
+      <a class="btn btn--line" href="https://forms.cloud.microsoft/r/nbgKqrhkqW" target="_blank" rel="noopener noreferrer">헤리티지 북 신청서</a>
+      <a class="btn btn--main" href="https://my.worldvision.or.kr/support/?key=26-hyundai-el&amp;crmcd=73635&amp;mcode=31755" target="_blank" rel="noopener noreferrer">석훈이네 지원하기</a>
     </div>
 
     <div class="contact rv">
@@ -492,19 +489,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.7);padding:48px 0 56px;fon
 </footer>
 
 <script>
-/* "석훈이네 지원하기" 링크 — URL이 정해지면 아래 따옴표 안에 넣으면 버튼이 활성화됩니다. */
-const SUPPORT_URL = "https://my.worldvision.or.kr/support/?key=26-hyundai-el&crmcd=73635&mcode=";
-
 (function(){
-  const btn = document.getElementById('supportBtn');
-  if (SUPPORT_URL) {
-    btn.href = SUPPORT_URL; btn.target = '_blank'; btn.rel = 'noopener noreferrer';
-  } else {
-    btn.setAttribute('aria-disabled','true');
-    btn.removeAttribute('href');
-    btn.innerHTML = '석훈이네 지원하기 <small>(링크 준비 중)</small>';
-  }
-
   // 스크롤 진행 바
   const bar = document.getElementById('progress');
   const onScroll = () => {
